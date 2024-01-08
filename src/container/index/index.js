@@ -1,129 +1,147 @@
-import {
-  createElement,
-  createHeader,
-} from '../../script/layout'
+// import {
+//   createElement,
+//   createHeader,
+// } from '../../script/layout'
 
-const page = document.querySelector('.page')
+// const page = document.querySelector('.page')
 
-const header = createHeader()
+// const header = createHeader()
 
-page.append(header)
+// page.append(header)
 
-const title = createElement('h1', 'title', 'Мій блог')
+// const title = createElement('h1', 'title', 'Мій блог')
 
-page.append(title)
+// page.append(title)
 
-// ==========
+// // ==========
 
-const POST_LIST = [
-  {
-    category: [
-      { text: 'Важливо', id: 1 },
-      { text: 'Нова', id: 2 },
-    ],
-    info: 'До біса планувальник, наймаємо дизайнера і готуємося до презентації, як Джобс',
-    date: '25.01',
-    viewed: false,
-  },
-  {
-    category: [{ text: 'Нова', id: 2 }],
-    info: 'Ми хотіли щоб у цьому чаті було близько 150 людей щоб зробити якісний пак самопрезентацій.',
-    date: '24.01',
-    viewed: true,
-  },
-]
+// const POST_LIST = [
+//   {
+//     category: [
+//       { text: 'Важливо', id: 1 },
+//       { text: 'Нова', id: 2 },
+//     ],
+//     info: 'До біса планувальник, наймаємо дизайнера і готуємося до презентації, як Джобс',
+//     date: '25.01',
+//     viewed: false,
+//   },
+//   {
+//     category: [{ text: 'Нова', id: 2 }],
+//     info: 'Ми хотіли щоб у цьому чаті було близько 150 людей щоб зробити якісний пак самопрезентацій.',
+//     date: '24.01',
+//     viewed: true,
+//   },
+// ]
 
-const createPost = () => {
-  const postList = createElement('main', 'post__list')
+// const createPost = () => {
+//   const postList = createElement('main', 'post__list')
 
-  POST_LIST.forEach((postData) => {
-    const post = createElement(
-      'div',
-      postData.viewed
-        ? 'post button post--viewed'
-        : 'post button',
-    )
+//   POST_LIST.forEach((postData) => {
+//     const post = createElement(
+//       'div',
+//       postData.viewed
+//         ? 'post button post--viewed'
+//         : 'post button',
+//     )
 
-    const postHeader = createElement('div', 'post__header')
+//     const postHeader = createElement('div', 'post__header')
 
-    // ========
+//     // ========
 
-    const categoryList = createElement(
-      'div',
-      'post__category-list',
-    )
+//     const categoryList = createElement(
+//       'div',
+//       'post__category-list',
+//     )
 
-    postData.category.forEach((category) => {
-      const categorySpan = createElement(
-        'span',
-        'post__category post__category--${category.id}',
-        category.text,
-      )
-      categoryList.append(categorySpan)
-    })
+//     postData.category.forEach((category) => {
+//       const categorySpan = createElement(
+//         'span',
+//         'post__category post__category--${category.id}',
+//         category.text,
+//       )
+//       categoryList.append(categorySpan)
+//     })
 
-    // ====
-    const dateSpan = createElement(
-      'span',
-      'post__date',
-      postData.date,
-    )
+//     // ====
+//     const dateSpan = createElement(
+//       'span',
+//       'post__date',
+//       postData.date,
+//     )
 
-    // =======
+//     // =======
 
-    postHeader.append(categoryList, dateSpan)
+//     postHeader.append(categoryList, dateSpan)
 
-    // ======
+//     // ======
 
-    const infoParagraph = createElement(
-      'p',
-      'post__info',
-      postData.info,
-    )
-    post.append(postHeader, infoParagraph)
+//     const infoParagraph = createElement(
+//       'p',
+//       'post__info',
+//       postData.info,
+//     )
+//     post.append(postHeader, infoParagraph)
 
-    // ========
-    postList.append(post)
-  })
+//     // ========
+//     postList.append(post)
+//   })
 
-  return postList
-}
+//   return postList
+// }
 
-// =======
+// // =======
 
-const post = createPost()
-page.append(post)
+// const post = createPost()
+// page.append(post)
 
-//=======
+// //=======
 
 import {
   creatElement,
   creatHeader,
 } from '../../script/layout'
 
-const page2 = document.querySelector('.page')
+const page = document.querySelector('.page')
 
-const header2 = creatHeader()
+const header = creatHeader()
 
-page2.append(header2)
+page.append(header)
 
 const title2 = creatElement('h1', 'title', 'Коммьюніті')
 
-page2.append(title2)
+page.append(title2)
 
 // ==========
 
 const POST__LIST = [
   {
     category2: [
-      { line: 'База знань', id: 1 },
-      { line2: 'Інфорнмація', id: 2 },
+      { text2: 'База знань', id: 1 },
+      { text2: 'Інформація', id: 2 },
     ],
-    title: 'Зустрічай!',
-    text: 'Наше коммьюніті у Телеграм!',
-    p: 'Що таке база знань?',
-    info: 'База знаний — база данных, содержащая правила вывода и информацию о человеческом опыте и знаниях в некоторой предметной области. В самообучающихся системах база знаний также содержит информацию, являющуюся результатом решения предыдущих задач.',
-    button: 'Перейти до коммьюніті у Телеграм!',
+  },
+
+  {
+    category2: [
+      { text2: 'Зустрічай!', id: 3 },
+      { text2: 'Наше коммьюніті у Телеграм!', id: 3 },
+    ],
+  },
+
+  {
+    category2: [
+      { text2: 'Що таке база знань?', id: 4 },
+      {
+        text2:
+          'База знаний — база данных, содержащая правила вывода и информацию о человеческом опыте и знаниях в некоторой предметной области. В самообучающихся системах база знаний также содержит информацию, являющуюся результатом решения предыдущих задач.',
+      },
+    ],
+  },
+
+  {
+    category2: [
+      { text2: 'Перейти до коммьюніті у Телеграм!', id: 5 },
+    ],
   },
 ]
 
@@ -150,24 +168,32 @@ const creatPost = () => {
     postData.category2.forEach((category) => {
       const categorySpan = creatElement(
         'span',
-        'post__category2 post__category--${category2.id}',
-        category.text,
+        'post__category2 post__category2--${category2.id}',
+        category.text2,
       )
       categoryList.append(categorySpan)
     })
 
     // =======
 
-    postHeader.append(categoryList)
+    const dateSpan = creatElement(
+      'span',
+      'post__date',
+      postData.date,
+    )
+
+    // ==========
+
+    postHeader.append(categoryList, dateSpan)
 
     // ======
 
-    const infoParagraph = creatElement('p', 'info')
-    post2.append(
-      postHeader,
-      infoParagraph,
-      buttonInformation,
+    const infoParagraph = creatElement(
+      'p',
+      'post__info',
+      postData.info,
     )
+    post.append(postHeader, infoParagraph)
 
     // ========
     postList.append(post)
@@ -178,7 +204,7 @@ const creatPost = () => {
 
 // =======
 
-const post2 = creatPost()
+const post = creatPost()
 page.append(post)
 
 //=======

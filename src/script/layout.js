@@ -43,12 +43,13 @@ export const createHeader = () => {
   return header
 }
 
-// =====
+// // =====
+
 export const creatElement = (tag, className, text) => {
-  const elem = document.creatElement(tag)
+  const elem = document.createElement(tag)
 
   if (className) {
-    element.className = className
+    elem.className = className
   }
 
   if (text) {
@@ -71,12 +72,12 @@ const HEADER__BUTTON__LIST = [
   },
 ]
 export const creatHeader = () => {
-  const header = creatElement('header', 'header')
+  const header = createElement('header', 'header')
 
   HEADER__BUTTON__LIST.forEach((params) => {
-    const button = creatElement('button', 'button')
+    const button = createElement('button', 'button')
 
-    const img = creatElement('img')
+    const img = createElement('img')
 
     Object.entries(params).forEach(([key, value]) => {
       img[key] = value
