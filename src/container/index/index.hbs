@@ -3,109 +3,33 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
 }}
 
-{{! <div class='page'> }}
-{{! <header class='header'>
-    <button class='button'>
-      <img
-        width='24px'
-        height='24px'
-        src='/svg/header__back.svg'
-      />
-    </button>
-    <button class='button'>
-      <img
-        width='24px'
-        height='24px'
-        src='/svg/header__avatar.svg'
-      />
-    </button>
-  </header> }}
-
-{{! <h1 class='title'>Мій блог</h1> }}
-
-{{! <main class='post__list'>
-    <div class='post button'>
-      <div class='post__header'>
-        <div class='post__category-list'>
-          <span
-            class='post__category post__category--1'
-          >Важливо</span>
-          <span
-            class='post__category post__category--2'
-          >Нова</span>
-        </div>
-        <span class='post__date'>25.01</span>
-      </div>
-      <p class='post__info'>
-        До біса планувальник, наймаємо дизайнера і готуємося
-        до презентації, як Джобс</p>
-    </div>
-    <div class='post button post--viewed'>
-      <div class='post__header'>
-        <div class='post__category-list'>
-          <span
-            class='post__category post__category--1'
-          >Важливо</span>
-          <span class='post__date'>24.01</span>
-        </div>
-        <p class='post__info'>Ми хотіли щоб у цьому чаті
-          було близько 150 людей щоб зробити якісний пак
-          самопрезентацій.</p>
-      </div> }}
-
-{{! </main>  }}
-{{! </div> }}
-
 <div class='page'>
-  {{! <header class='header'>
-    <button class='button'>
-      <img
-        width='24px'
-        height='24px'
-        src='/svg/header__back.svg'
-      />
-    </button>
-    <button class='button'>
-      <img
-        width='24px'
-        height='24px'
-        src='/svg/header__avatar.svg'
-      />
-    </button>
-  </header>
+  <h1 class='title'>To-do list</h1>
 
-  <h1 class='title'>Коммьюніті</h1>
-
-  <main class='post__list'>
-
-    <div class='post__header'>
-      <div class='post__category-list'>
-        <span class='line'>База знань</span>
-        <span class='line2'>Інформація</span>
-        <a href='#'></a>
-      </div>
-    </div>
-    <div class='card'>
-      <div class='title'>Зустрічай!</div>
-      <p class='text'>Наше коммьюніті у телеграм!</p>
-    </div>
-
-    <p>Що таке база знань?</p>
-
-    <span class='info'>База знаний — база данных, содержащая
-      правила вывода и информацию о человеческом опыте и
-      знаниях в некоторой предметной области. В
-      самообучающихся системах база знаний также содержит
-      информацию, являющуюся результатом решения предыдущих
-      задач.</span>
-
-    <button class='button-information'>
-      <p class='button-info'>Перейти до коммьюніті у
-        Телеграм</p>
-    </button>
-
-  </main> }}
+  <div class='form'>
+    <input
+      type='text'
+      class='form__input'
+      placeholder='Введіть задачу...'
+    />
+    <button class='form__button'>Додати</button>
+  </div>
+  <main class='task__list'> </main>
 </div>
+
+<template id='task'>
+  <div class='task task'>
+    <span class='task__number'>1.</span>
+    <span class='task__text'>Some placeholder content in a
+      paragraph below the heading and date</span>
+    <button class='task__button task__button--do'></button>
+    <button
+      class='task__button task__button--cancel'
+    ></button>
+  </div>
+
+</template>
+
 {{!
     Цей код містить лише те, що буде виводитись в <body>
     Адже наш layout/default.hbs має вже структуру HTML
